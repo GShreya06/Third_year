@@ -1,22 +1,18 @@
 $(document).ready(function () {
-    $('#subm').click(function () {
-        firname = $('#fname').val();
-        lasname = $('#fname').val();
-        mobile = $('#fname').val();
+    $('.registerbtn').click(function () {
         email = $('#fname').val();
-        const courses = [];
-        $("input[type=checkbox]:checked").each(function () {
-            courses.push($(this).val());
-        });
+        password = $('#fname').val();
+        // const courses = [];
+        // $("input[type=checkbox]:checked").each(function () {
+        //     courses.push($(this).val());
+        // });
 
-        function Student(fname, lname, mob, eid, courses) {
-            this.fname = firname;
-            this.fname = firname;
-            this.fname = firname;
-            this.fname = firname;
+        function Student(email,password) {
+            this.email = email ;
+            this.password = password;
         }
 
-        var student1 = new Student(firname, lname, mob, email, courses);
+        var student1 = new Student(email, password);
         console.log(student1)
     });
 });
