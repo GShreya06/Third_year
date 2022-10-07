@@ -8,42 +8,44 @@
     <title>CAR DATA</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="car.js"></script>
+    <link rel="stylesheet" href="car.css">
 </head>
 
 <body>
     <div class="container">
-        <u>
+        <header>
             <h1>CAR DATA</h1>
-        </u>
-        <div class="form">
-            <form onsubmit="event.preventDefault(); logData();" class="input-group">
-                <label for="manufacturer">Manufacturer Name*</label>
-                <input id="manufacturer" type="text" placeholder="Eg. Adams Smith" autofocus required><br><br>
+            <div class="form">
+                <form onsubmit="event.preventDefault(); logData();" class="input-group">
+                    <label for="manufacturer">Manufacturer Name*</label>
+                    <input id="manufacturer" type="text" placeholder="Eg. Adams Smith" autofocus required><br><br>
 
-                <label for="model">Model Name*</label>
-                <input id="model" type="text" placeholder="Eg. Benz" required><br><br>
+                    <label for="model">Model Name*</label>
+                    <input id="model" type="text" placeholder="Eg. Benz" required><br><br>
 
-                <label for="manuf_year">Manufacturer Name*</label>
-                <input id="manuf_year" type="number" placeholder="Eg. 2011" required><br><br>
+                    <label for="manuf_year">Manufacturer Name*</label>
+                    <input id="manuf_year" type="number" placeholder="Eg. 2011" required><br><br>
 
-                <label for="fuel_type">Fuel Type*</label>
-                <select id="fuel_type">
-                    <option value="Petrol">Petrol</option>
-                    <option value="Deisel">Deisel</option>
-                </select><br><br>
+                    <label for="fuel_type">Fuel Type*</label>
+                    <select id="fuel_type">
+                        <option value="Petrol">Petrol</option>
+                        <option value="Deisel">Deisel</option>
+                    </select><br><br>
 
-                <label for="color">Color*</label>
-                <input id="color" type="text" placeholder="Eg. Black" required><br><br>
+                    <label for="color">Color*</label>
+                    <input id="color" type="text" placeholder="Eg. Black" required><br><br>
 
-                <label for="seating_cap">Seating Capacity*</label>
-                <input id="seating_cap" type="number" placeholder="Eg. 4" required><br><br>
+                    <label for="seating_cap">Seating Capacity*</label>
+                    <input id="seating_cap" type="number" placeholder="Eg. 4" required><br><br>
 
-                <label for="cubic_cap">Cubic Capacity*</label>
-                <input id="cubic_cap" type="number" placeholder="Eg. 90" required><br><br>
+                    <label for="cubic_cap">Cubic Capacity*</label>
+                    <input id="cubic_cap" type="number" placeholder="Eg. 90" required><br><br>
 
-                <button type="submit" class="button">Submit</button><br><br>
-            </form>
-        </div>
+                    <button type="submit" class="button">Submit</button><br><br>
+                </form>
+            </div>
+
+        </header>
     </div>
 </body>
 
