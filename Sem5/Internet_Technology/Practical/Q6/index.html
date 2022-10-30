@@ -1,0 +1,51 @@
+<!-- Create a form that takes data about a pet. The form must be well designed and should acceptthe pet’s name, age, weight, type, and 
+what it likes most. At the submission of this form create a Petobject in JavaScriptfilled with these values and log that object and 
+equivalent JSON on the console. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My pet</title>
+    <link rel="stylesheet" href="p6.css">
+</head>
+
+<body>
+    <h1>MY DOG</h1>
+    <form>
+        <ul class="form-style-1">
+            <li><label>Name </label><input type="text" name="field1" id="name" /></li>
+            <li>
+                <label>Age</label>
+                <input type="text" name="field2" id="age" />
+            </li>
+            <li>
+                <label>Weight (in kgs) </label>
+                <input type="text" name="field3" id="weight" />
+            </li>
+            <li>
+                <label>Breed</label>
+                <select name="field4" class="field-select" id="breed">
+                    <option value="german">German Shepherd</option>
+                    <option value="beagle">Beagle</option>
+                    <option value="golden">Golden Retriever</option>
+                    <option value="pomeranian">Pomeranian</option>
+                    <option value="labrador">Labrador Shepherd</option>
+                </select>
+            </li>
+            <li>
+                <label>Favourite Food </label>
+                <input type="text" name="field5" id="food" />
+            </li>
+            <li>
+                <button type="button" onclick="dog()">Submit</button>
+            </li>
+        </ul>
+    </form>
+
+</body>
+<script src="p6.js"></script>
+
+</html>
