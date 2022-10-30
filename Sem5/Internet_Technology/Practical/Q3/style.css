@@ -9,8 +9,8 @@ body {
     background-color: black;
     list-style: none;
     margin: 0;
-    padding: 15px;
-    text-align: center;
+    padding: 20px;
+    text-align: left;
 }
 
 .nav li {

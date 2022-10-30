@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="p4.css">
+    <title>Multiplication-Tables</title>
+    <script>
+        function text_font_size(i) {
+            return 10 + i + "px";
+        }
+        function text_color(i) {
+            color_array = ['black', 'green', 'grey', 'purple', 'pink', 'orange', 'brown', 'blue', 'yellow', 'red']
+            return color_array[i - 1]
+        }
+        function display(i) {
+            timer = document.getElementById('timer')
+            var table_row = document.createElement("button");
+            table_row.classList.add('button2')
+            table_row.style.width = 1200 + "px";
+            table_row.style.fontSize = text_font_size(i);
+            table_row.style.color = text_color(i);
+            for (var k = 1; k <= 10; k++) {
+                var row_text = document.createTextNode(i + " x " + k + " = " + i * k + " " + " | ");
+                table_row.appendChild(row_text);
+                timer.appendChild(table_row)
+            }
+
+        }
+        function timer_display() {
+            var refresh = 5000;
+            var i = 2;
+            myvar = setInterval(function () {
+                if (i == 11)
+                    clearInterval(myvar)
+                else
+                    display(i++)
+            }, refresh)
+        }
+        timer_display()
+    </script>
+</head>
+<body>
+    <div id=timer></div>
+</body>
+</html>

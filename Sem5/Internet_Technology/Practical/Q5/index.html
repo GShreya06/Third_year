@@ -1,0 +1,44 @@
+<!-- Create an HTML page with a paragraph written on it and under which 9 buttons are placedin a3X3 grid. 
+The first row is for buttons labeled with colors names Red, Green, and Blue, the second rowwith numbers 10, 20, 30, 
+and the third row with different font names.Click event of each of thebuttons should make the appropriate change 
+in the style of paragraph. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="p5.css">
+</head>
+
+<body>
+    <p>
+        Create an HTML page with a paragraph written on it and under which 9 buttons are placedin a3X3 grid.
+        The first row is for buttons labeled with colors names Red, Green, and Blue, the second rowwith numbers 10, 20,
+        30, and the third row with different font names.
+        Click event of each of the buttons should make the appropriate change in the style of paragraph.
+    </p>
+    <table>
+        <tr>
+            <td><button class="btn1">Red</button></td>
+            <td class="vertical"><button class="btn2">Green</button></td>
+            <td><button class="btn3">Blue</button></td>
+        </tr>
+        <tr>
+            <td class="horizontal"><button class="btn4">10</button></td>
+            <td class="vertical horizontal"><button class="btn5">20</button></td>
+            <td class="horizontal"><button class="btn6">30</button></td>
+        </tr>
+        <tr>
+            <td><button class="btn7">Garamond</button></td>
+            <td class="vertical"><button class="btn8">Brush Script MT</button></td>
+            <td><button class="btn9">Courier New</button></td>
+        </tr>
+    </table>
+</body>
+<script src="p5.js"></script>
+
+</html>

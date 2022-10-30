@@ -1,0 +1,17 @@
+body {
+    background-color: purple;
+}
+
+.button2 {
+    background-color: white;
+    border: none;
+    color: white;
+    padding: 16px 10px 16px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 5px 5px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 15px;
+}
