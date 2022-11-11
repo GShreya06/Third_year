@@ -5,7 +5,7 @@ const mysql = require('mysql');
 var qs = require('querystring');
 
 const hostname = '127.0.0.1'
-const port = 10000
+const port = 3000
 
 function onRequest(req, res) {
     var baseURL = 'http://' + req.headers.host + '/';
@@ -61,12 +61,14 @@ function dosignin(req, res, body) {
         password: "shreya12345678",
         database: "mydb"
     });
-
+    
     con.connect(function (err) {
         var username = body.username;
         var password = body.password;
-        con.query("SELECT * FROM userlogin where username=? and password=?", [username, password], function (err, result, fields) {
-            console.log(result);
+        con.query("SELECT * FROM userlogin where username=? and password=?", [username, password], function (err, result, fields) 
+        {
+            // console.log("Connected!");
+            // console.log(result);
             if (err) {
                 res.write("failed")
                 res.end()
@@ -95,13 +97,14 @@ function dosignup(req, res, body) {
     });
 
     con.connect(function (err) {
-        //console.log(">>>", body)
+        console.log(">>>", body)
         var cnfrmpass = body.cnfrmpass
         inputData = {
             username: body.username,
             password: body.password
         }
-        con.query("SELECT * FROM userlogin where username=?", [inputData.username], function (err, result, fields) {
+        con.query("SELECT * FROM userlogin where username=?", [inputData.username], function (err, result, fields) 
+        {
             console.log(result);
             if (err) {
                 res.write("Failed")
