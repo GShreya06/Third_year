@@ -1,0 +1,30 @@
+<!-- Display a timer on screen that keeps on updating time every second. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+</head>
+
+<body>
+    <h1>The Window Object</h1>
+    <h2>The setInterval() and clearInterval() methods</h2>
+    <p id="demo"></p>
+    <button onclick="MystopFunction()">stoptime</button>
+    <script>
+        const myInterval = setInterval(myTimer, 1000);
+        function myTimer() {
+            const date = new Date();
+            document.getElementById("demo").innerHTML = date.toLocaleTimeString();
+        }
+        function mystopfunction() {
+            clearInterval(myInterval);
+        } 
+    </script>
+
+</body>
+
+</html>

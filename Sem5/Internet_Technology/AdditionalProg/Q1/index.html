@@ -1,3 +1,5 @@
+<!-- Design a student registration form. Pick user data using Jquery selectors and assign those values to a javascript object.
+ Log that object -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,35 +8,114 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration form</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="q1.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.2/js/bootstrap.min.js"></script>
+
 </head>
 
 <body>
-    <form>
-        <div class="container">
-            <h1>Register</h1>
-            <p>Please fill in this form to create an account.</p>
-            <hr>
+    <div class="form">
+        <form action="#" id="f">
+            <table>
+                <tr>
+                    <td class="tdLabel">
+                        <label for="name" class="label">Name :</label>
+                    </td>
+                    <td>
+                        <input type="text" name="name" placeholder="Enter your Name" id="rname" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tdLabel">
+                        <label for="rollno" class="label">College roll no. :</label>
+                    </td>
+                    <td>
+                        <input type="rollno" name="rollno" placeholder="202****" id="rrollno" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tdLabel">
+                        <label for="email" class="label">Email id :</label>
+                    </td>
+                    <td>
+                        <input type="email" name="email" placeholder="abc@gmail.com" id="remail" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tdLabel">
+                        <label for="number" class="label">Mobile no. :</label>
+                    </td>
+                    <td>
+                        <input type="text" name="number" placeholder="Enter your mobile no." id="rnumber" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tdLabel">
+                        <label for="gender" class="label" id="rgender">Gender :</label>
+                    </td>
+                    <td>
+                        <input type="radio" name="gender" id="gendermale" value="male" />
+                        <label for="gendermale">Male</label>
+                        <input type="radio" name="gender" id="genderfemale" value="female" />
+                        <label for="genderfemale">Female</label>
+                        <input type="radio" name="gender" id="genderother" value="other" />
+                        <label for="genderother">Other</label>
+                    </td>
+                    <br>
+                </tr>
+                <tr>
+                    <td class="tdLabel">
+                        <label for="rcity" class="label">City:</label>
+                    </td>
+                    <td><select name="city" id="rcity">
+                            <option value="delhi">Delhi</option>
+                            <option value="mumbai">Mumbai</option>
+                            <option value="haryana">Haryana</option>
+                            <option value="up">Uttar Pradesh</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <div class="btn" text-align="center">
+                            <input type="submit" id="register" value="submit" />
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
 
-            <label for="email"><b>Email</b></label>
-            <input type="text" placeholder="Enter Email" name="email" id="email" required>
+    <script src="jquery.js"></script>
 
-            <label for="psw"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+    <!-- <script src="q1.js"></script> -->
+    <script>
+        const jqueryform = document.getElementById("f");
+        jqueryform.addEventListener("submit", async (ev) => {
+            ev.preventDefault();
+            var name = $("#rname").val();
+            var rollno = $("#rrollno").val();
+            var email = $('#remail').val();
+            var number = $("#rnumber").val();
+            var gender = $("#rgender").val();
+            var gender = $("input[name='gender']:checked").val();
+            var city = $('#rcity option:selected').val();
+            function student(n, rn, em, num, gen, cty) {
+                this.na = n;
+                this.ro = rn;
+                this.ema = em;
+                this.n = num;
+                this.g = gen;
+                this.c = cty;
 
-            <label for="psw-repeat"><b>Repeat Password</b></label>
-            <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
-            <hr>
-
-            <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
-            <button type="submit" class="registerbtn">Register</button>
-        </div>
-
-        <div class="container signin">
-            <p>Already have an account? <a href="#">Sign in</a>.</p>
-        </div>
-    </form>
-
+            }
+            var res = new student(name, rollno, email, number, gender, city);
+            var r = document.getElementById("register");
+            r.innerHTML = "Name: " + res.na + "\n" + "Student's roll no.: " + res.ro + "\n" + "Student's Email ID: " + res.ema + "\n" +"Student's Phone No.: " + res.n + "\n" + "Gender is: " + res.g+ "\n" + "Student's city : " + res.c + "\n";
+            console.log(res);
+        });
+    </script>
 </body>
-
 </html>

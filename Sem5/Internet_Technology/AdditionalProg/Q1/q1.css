@@ -1,0 +1,47 @@
+body {
+    background-color: #ede7f6;
+    font-family: Roboto, sans-serif;
+}
+
+.form {
+    height: 900px;
+    width: 700px;
+    margin: auto;
+}
+
+table {
+    margin: auto;
+    border-style: solid;
+    border-width: 4px;
+    height: 700px;
+    width: 600px;
+    background-color: #cfe7b3;
+    margin: 30px;
+    border-top: 10px solid rgb(11, 7, 63);
+    border-bottom: 10px solid rgb(11, 7, 63);
+    padding: 30px;
+}
+
+h1 {
+    font-family: cursive;
+    text-align: center;
+}
+
+.tdLabel {
+    width: 160px;
+}
+
+.btn #register {
+    width: 100px;
+    height: 40px;
+    display: inline-block;
+    background-color: yellowgreen;
+    font-size: 20px;
+    margin: 20px;
+    border-radius: 5px;
+}
+
+.btn #register:hover {
+    background: #74055c;
+    color: rgb(255, 255, 255);
+}

@@ -11,30 +11,27 @@ on______day” on screen CODE:  -->
 </head>
 
 <body>
-
-    <body>
-        <script>
-            var date = prompt("Enter your date of birth(e.g. June 6,2001", "Month DD,YYYY");
-            var day = new date(dob).getday();
-            switch (day) {
-                case 0: document.write("<B>Your birthday was on Sunday</B>");
-                    Break;
-                case 1: document.write("<B>Your birthday was on Monday</B>");
-                    Break;
-                case 2: document.write("<B>Your birthday was on Tuesday</B>");
-                    Break;
-                case 3: document.write("<B>Your birthday was on Wednesday</B>");
-                    Break;
-                case 4: document.write("<B>Your birthday was on Thursday</B>");
-                    Break;
-                case 5: document.write("<B>Your birthday was on Friday</B>");
-                    Break;
-                case 6: document.write("<B>Your birthday was on Saturday</B>");
-                    Break;
-                default:
-                    document.write("Please enter input in given format..");
-            } 
-        </script>
-    </body>
-
+    <script>
+        var d= prompt("Enter your date of birth(e.g. June 6,2001", "Month DD,YYYY");
+        var day = new Date(d).getDay();
+        switch (day) {
+            case 0: document.write("<B>Your birthday was on Sunday</B>");
+                Break;
+            case 1: document.write("<B>Your birthday was on Monday</B>");
+                Break;
+            case 2: document.write("<B>Your birthday was on Tuesday</B>");
+                Break;
+            case 3: document.write("<B>Your birthday was on Wednesday</B>");
+                Break;
+            case 4: document.write("<B>Your birthday was on Thursday</B>");
+                Break;
+            case 5: document.write("<B>Your birthday was on Friday</B>");
+                Break;
+            case 6: document.write("<B>Your birthday was on Saturday</B>");
+                Break;
+            default:
+                document.write("Please enter input in given format..");
+        } 
+    </script>
+</body>
 </html>
