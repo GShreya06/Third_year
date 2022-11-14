@@ -1,0 +1,53 @@
+<!-- Design a webpage displaying a restaurant's menu with image of food item along 
+with price and item name. On smaller devices only name and price should display. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="q4.css">
+    <link rel="stylesheet" media= "screen and (max-width: 1170px )" href="phone.css">
+    <title>Restaurant's Menu</title>
+</head>
+
+<body>
+    <header>
+        <h1 class="section-title">Restaurant's Menu</h1>
+    </header>
+    <section class="menu section bd-container" id="menu">
+        <div class="menu__container bd-grid">
+            <div class="menu__content">
+                <img src="plate1.png" alt="" class="menu__img">
+                <h3 class="menu__name">Barbecue salad</h3>
+                <span class="menu__preci">@999</span>
+                <a href="#" class="button menu__button"><i class='bx bx-cart-alt'></i></a>
+            </div>
+
+            <div class="menu__content">
+                <img src="plate2.png" alt="" class="menu__img">
+                <h3 class="menu__name">Salad with fish</h3>
+                <span class="menu__preci">@850</span>
+                <a href="#" class="button menu__button"><i class='bx bx-cart-alt'></i></a>
+            </div>
+
+            <div class="menu__content">
+                <img src="plate3.png" alt="" class="menu__img">
+                <h3 class="menu__name">Spinach salad</h3>
+                <span class="menu__preci">@950</span>
+                <a href="#" class="button menu__button"><i class='bx bx-cart-alt'></i></a>
+            </div>
+
+            <div class="menu__content">
+                <img src="plate4.jpg" alt="" class="menu__img">
+                <h3 class="menu__name">Cheesy Pizza</h3>
+                <span class="menu__preci">@950</span>
+                <a href="#" class="button menu__button"><i class='bx bx-cart-alt'></i></a>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

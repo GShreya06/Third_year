@@ -1,7 +1,7 @@
 const http = require('http')
 const url = require('url')
 const fs = require('fs')
-const mysql = require('mysql');
+var  mysql = require('mysql');
 var qs = require('querystring');
 
 const hostname = '127.0.0.1'
@@ -67,9 +67,9 @@ function dosignin(req, res, body) {
         var password = body.password;
         con.query("SELECT * FROM userlogin where username=? and password=?", [username, password], function (err, result, fields) 
         {
-            // console.log("Connected!");
+            console.log("Connected!");
             // console.log(result);
-            if (err) {
+            if (err){
                 res.write("failed")
                 res.end()
                 return;

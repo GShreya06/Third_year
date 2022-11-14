@@ -1,9 +1,8 @@
 h1 {
     color: black;
-    background-color: lightgrey;
+    background-color: lightcoral;
     text-align: center;
     text-decoration: underline;
-    text-shadow: 2px 2px 5px #DC143C;
 }
 
 .form-style-1 {
@@ -31,14 +30,14 @@ h1 {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
-    border: 1px solid #BEBEBE;
+    border: 1px solid black;
     padding: 7px;
     margin: 0px;
     outline: none;
 }
 
 .form-style-1 button {
-    background-color: #DC143C;
+    background-color: blue;
     border: none;
     color: white;
     padding: 15px 32px;

@@ -1,11 +1,11 @@
 
 $("button").on("click", function () {
-    $(".txtstyle").css({ "font-family": "Brush Script MT " });
     $(".container").css({ "font-family": "Tahoma", "padding": "0.10px" });
-    $("h2").css({ "color": "#DC143C", "font-size": "40px" })
-    $("body").css({ "background-color": "black", "color": "white" });
+    $("h2").css({ "color": "black", "font-size": "40px" })
+    $("body").css({ "background-color": "coral", "color": "white" });
     $("h5").css("font-size", "30px")
-    $("strong").css("color", "#FA8072");
+    $("strong").css("color", "black");
     $(".fs").css("font-size", "25px")
     $("table").css({ "width": "50%" })
+    $("button").css({"background-color":"brown"})
 });
